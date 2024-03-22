@@ -13,3 +13,4 @@ public static class InfrastructureServiceRegistration
         return services;
     }
 }
+//dev powershell=> cd src/projeadı(5 dosyanın old)=>narchgen=> narchgen generate crud=>entity seç=>cahing,logging, sec operation security
