@@ -1,7 +1,9 @@
 ﻿
 
+using NArchitecture.Core.Persistence.Repositories;
+
 namespace Domain.Entities;
-public class Member : User
+public class Member : Entity<Guid>
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }

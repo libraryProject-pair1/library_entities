@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using Application.Services.AuthenticatorService;
 using Application.Services.AuthService;
 using Application.Services.UsersService;
@@ -19,6 +19,11 @@ using NArchitecture.Core.Localization.Resource.Yaml.DependencyInjection;
 using NArchitecture.Core.Mailing;
 using NArchitecture.Core.Mailing.MailKit;
 using NArchitecture.Core.Security.DependencyInjection;
+using Application.Services.Books;
+using Application.Services.Categories;
+using Application.Services.Publishers;
+using Application.Services.Authors;
+using Application.Services.Members;
 
 namespace Application;
 
@@ -59,6 +64,13 @@ public static class ApplicationServiceRegistration
 
         services.AddSecurityServices<Guid, int>();
 
+        services.AddScoped<IBookService, BookManager>();
+        services.AddScoped<ICategoryService, CategoryManager>();
+        services.AddScoped<IPublisherService, PublisherManager>();
+        services.AddScoped<IAuthorService, AuthorManager>();
+        services.AddScoped<IBookService, BookManager>();
+        services.AddScoped<IMemberService, MemberManager>();
+        services.AddScoped<IPublisherService, PublisherManager>();
         return services;
     }
 

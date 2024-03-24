@@ -16,7 +16,6 @@ public class Book : Entity<Guid>
     public virtual Author? Author { get; set; }
     public Guid PublisherId { get; set; }
     public virtual Publisher? Publisher { get; set; }
-    public Guid CatalogId { get; set; }
-    public virtual Catalog? Catalog { get; set; }
+    
     public virtual ICollection<Category> Category { get; set; }
 }
